@@ -205,6 +205,9 @@ class TypesGenerator
                     $class['interfaceNamespace'] = isset($typeConfig['namespaces']['interface']) && $typeConfig['namespaces']['interface'] ? $typeConfig['namespaces']['interface'] : $config['namespaces']['interface'];
                     $class['interfaceName'] = sprintf('%sInterface', $typeName);
                 }
+
+                // ORM\Table
+                $class['ormTable'] = isset($typeConfig['ormTable']) ? $typeConfig['ormTable'] : null;
             }
 
             // Fields

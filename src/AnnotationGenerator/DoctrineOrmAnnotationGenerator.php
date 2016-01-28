@@ -44,9 +44,15 @@ class DoctrineOrmAnnotationGenerator extends AbstractAnnotationGenerator
             }
         }
 
+        $ormTable = '';
+        if ($class['ormTable']) {
+            $ormTable = '@ORM\Table('.$class['ormTable'].')';
+        }
+
         return [
             '',
             $inheritanceMapping,
+            $ormTable,
         ];
     }
 

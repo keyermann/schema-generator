@@ -10,6 +10,7 @@ annotationGenerators:
 # The list of types and properties we want to use
 types:
   Person:
+    ormTable: 'name="contact", indexes={@Index(name="contact_idx", columns={"name", "familyName"})}'
     parent: false
     properties:
       name: ~

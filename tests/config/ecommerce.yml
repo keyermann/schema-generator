@@ -61,6 +61,7 @@ types:
     properties:
       caption: ~
   ProductModel:
+    ormTable: 'name="product2016", indexes={@Index(name="pdt_idx", columns={"brand", "product_id"})}'
     properties:
       isVariantOf: ~
   Offer:
